@@ -1,0 +1,9 @@
+<apex:page >
+<script>
+   window.onload = new function() { checkCondition(); };
+    function checkCondition()
+    {
+        window.location = "http://www.google.com/";
+     }
+     </script>
+</apex:page>

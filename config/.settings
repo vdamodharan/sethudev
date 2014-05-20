@@ -1,0 +1,19 @@
+{
+    "username": "sethu.svce@gmail.com", 
+    "environment": "developer", 
+    "project_name": "Sethu Dev", 
+    "workspace": "C:\\Mavensmate Workspace", 
+    "org_url": "", 
+    "namespace": "", 
+    "id": "6N4M21GB1NS00D4WC7HX9II9SVAYMEJX", 
+    "metadata_container": "1dc90000000DPa2AAG", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "CustomObject", 
+        "Profile", 
+        "StaticResource"
+    ]
+}

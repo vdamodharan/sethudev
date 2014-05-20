@@ -1,0 +1,31 @@
+<apex:page >
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+function makeapicalls(){
+    for (var i=0;i<20;i++)
+    { 
+    console.log('api call #' + i);
+        $.ajax({
+            url : 'https://api.v2.badgeville.com/api/berlin/243717ce6c69777f5fd3ffaff2c1a926/reward_definitions.json?site=bg.sfdc.test.site',
+            dataType : 'jsonp',
+            success : function(data){
+                console.log(data);
+            },
+            error : function(data){
+                console.log(data);
+            }
+        });
+    }
+}
+    /*var jqxhr = $.get("https://api.v2.badgeville.com/api/berlin/243717ce6c69777f5fd3ffaff2c1a926/reward_definitions.json?site=bg.sfdc.test.site", function() {
+      console.log("success");
+    })
+    .done(function() { console.log("second success"); })
+    .fail(function() { console.log("error"); })
+    .always(function() { console.log("finished"); });*/
+</script>
+test api limit page
+<input type="button" onClick="javascript:makeapicalls();" value="make api calls" />
+</apex:page>

@@ -1,0 +1,28 @@
+<apex:page >
+  
+  <script>
+    window.BadgevilleAsynchInit = function() {
+        // Add any Badgeville.Settings changes (such as domain) into this extend call:
+        Badgeville.extend( Badgeville.Settings, {
+            key: '858de7c353f042f66205e16fb97bc9d2',
+            domain: 'bg.sfdc.test.site'
+        });
+
+        // Any actions that rely on Badgeville being initialized (such as gear creation) should be wrapped in a Badgeville.ready call
+        Badgeville.ready( function() {
+
+        });
+    };
+
+    // Load the Framework asynchronously
+    (function() {
+        var s = document.createElement( 'script' );
+        s.async = true;
+        s.src = document.location.protocol + '//api.v2.badgeville.com/v4/badgeville-current.js';
+        document.body.appendChild(s);
+    }());
+</script>
+
+            <div class="bv_leaderboard"></div>
+  
+</apex:page>

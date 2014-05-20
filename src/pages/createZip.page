@@ -1,0 +1,11 @@
+<apex:page controller="createZipController">
+<apex:form >
+<c:zip name="generateZip" oncomplete="deployZip(data);" >
+	<c:zipEntry path="package.xml" data="{!PackageXml}"/>
+	<c:zipEntry path="triggers/{!behaviorName}.trigger-meta.xml" data="{!TriggerMetadata}"/>
+	<c:zipEntry path="triggers/{!behaviorName}.trigger" data="{!triggerdata}"/>
+	<c:zipEntry path="classes/{!testClassName}.cls-meta.xml" data="{!TestClassMetadata}"/>
+	<c:zipEntry path="classes/{!testClassName}.cls" data="{!TestClass}"/> 
+</c:zip> 
+</apex:form>
+</apex:page>

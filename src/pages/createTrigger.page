@@ -1,0 +1,14 @@
+<apex:page controller="MetadataDeployController">
+	<apex:form >
+	<!--  Name of the behavior (Trigger) -->
+		<apex:pageblock >
+			<apex:pageblockSection columns="2">
+				<apex:outputlabel value="Name of behavior" for="behaviorName"/> 
+				<apex:inputtext value="{!behaviorName}" id="behaviorName"/>
+				<apex:outputlabel value="Triggers" for="Triggers"/> 
+				<apex:commandbutton action="{!addTrigger}" value="Add a Trigger" id="Triggers"/>
+			</apex:pageblockSection>
+		</apex:pageblock>
+		<!--  -->
+		</apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page >
+<div>
+<iframe src="https://ap1.salesforce.com/knowledge/knowledgeHome.apexp" height="900" width="900" />
+</div>
+</apex:page>

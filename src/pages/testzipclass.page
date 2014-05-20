@@ -1,0 +1,24 @@
+<apex:page controller="metatestdeployclass" sidebar="false">
+	<apex:form id="form">
+	    <apex:sectionHeader title="Metadata Deploy Demo"/>
+		<apex:pageMessages />
+		<apex:actionPoller action="{!checkAsyncRequest}" interval="5" rerender="form" rendered="{!NOT(ISNULL(AsyncResult))}"/>
+		<apex:actionFunction name="deployZip" action="{!deployZip}" rendered="{!ISNULL(AsyncResult)}" rerender="form">
+			<apex:param name="data" assignTo="{!ZipData}" value=""/>
+		</apex:actionFunction>
+		<c:zip name="generateZip" oncomplete="deployZip(data);" rendered="{!ISNULL(AsyncResult)}">
+			<c:zipEntry path="package.xml" data="{!PackageXml}"/>
+			<c:zipEntry path="classes/HelloWorld.cls-meta.xml" data="{!HelloWorldMetadata}"/>
+			<c:zipEntry path="classes/HelloWorld.cls" data="{!HelloWorld}"/>
+			<c:zipEntry path="classes/HelloWorld2.cls-meta.xml" data="{!HelloWorld2Metadata}"/>
+			<c:zipEntry path="classes/HelloWorld2.cls" data="{!HelloWorld2}"/>
+			<c:zipEntry path="triggers/HelloWorldtrigger.trigger-meta.xml" data="{!HelloWorldtriggerMetadata}"/>
+			<c:zipEntry path="triggers/HelloWorldtrigger.trigger" data="{!HelloWorldtrigger}"/>
+			<c:zipEntry path="classes/testclass.cls-meta.xml" data="{!testclassMetadata}"/>
+			<c:zipEntry path="classes/testclass.cls" data="{!testclass}"/>
+		</c:zip>
+		<apex:outputPanel rendered="{!ISNULL(AsyncResult)}">
+			<input type="button" onclick="generateZip();" value="Deploy"/>
+		</apex:outputPanel>
+ 	</apex:form>
+</apex:page>

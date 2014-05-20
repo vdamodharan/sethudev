@@ -1,0 +1,3 @@
+<apex:page >
+  <apex:iframe src="http://jivedemo-cloudsquadsqa1.jivecustom.com/thread/2066" scrolling="true" id="theIframe"/>
+</apex:page>

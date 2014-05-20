@@ -1,0 +1,1 @@
+@isTest public class Swarna{public static testmethod void testtrigger(){Account acc = new Account(name = 'test');insert acc;}}

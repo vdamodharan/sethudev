@@ -28,7 +28,7 @@
             <c:SitePoweredBy />
           </apex:panelGrid>
           <br/>
-          <apex:messages />
+          <apex:messages id="test"/>
           <br/>
         </apex:panelGrid>
       </center>
